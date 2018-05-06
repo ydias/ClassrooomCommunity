@@ -11,13 +11,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.yann.classroom_community.dummy.DummyContent;
-import com.example.yann.classroom_community.dummy.DummyContent.DummyItem;
 
 import java.util.List;
 
 /**
- * A fragment representing a list of Items.
+ * A fragment representing a list of Friends.
  * <p/>
  * Activities containing this fragment MUST implement the {@link OnListFragmentInteractionListener}
  * interface.

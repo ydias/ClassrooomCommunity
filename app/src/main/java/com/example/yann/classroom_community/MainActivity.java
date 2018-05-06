@@ -19,7 +19,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.example.yann.classroom_community.dummy.DummyContent;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -116,6 +115,10 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    /**
+     * Called when a friend is clicked in the friendlist : Launches QuizActivity
+     * @param friend
+     */
     public void onFriendFragmentInteraction(FriendContent.Friend friend) {
         // Do stuff
         Bundle bundle = getIntent().getExtras();

@@ -1,33 +1,37 @@
 package com.example.yann.classroom_community;
 
-import com.example.yann.classroom_community.dummy.DummyContent;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * A class designed to store friend data
+ */
 public class FriendContent {
 
     /**
-     * An array of sample (dummy) items.
+     * An array of sample friends.
      */
     public static final List<FriendContent.Friend> FRIENDS = new ArrayList<FriendContent.Friend>();
 
     /**
-     * A map of sample (dummy) items, by ID.
+     * A map of sample friends, by ID.
      */
     public static final Map<String, FriendContent.Friend> FRIEND_MAP = new HashMap<String, FriendContent.Friend>();
 
     private static final int COUNT = 25;
 
     static {
-        // Add some sample items.
+        // Add some sample friends.
         /*
+         ** Create random friends
         for (int i = 1; i <= COUNT; i++) {
             addItem(createFriend(i));
         }
         */
+
+        // A list of preestablished friends
         addItem(new Friend("1","bob","online"));
         addItem(new Friend("2","tom","offline"));
         addItem(new Friend("3","rob","online"));
@@ -58,12 +62,20 @@ public class FriendContent {
         return builder.toString();
     }
 
-
+    /**
+     * Data structure for a friend
+     */
     public static class Friend {
         public final String id;
         public final String name;
         public final String status;
 
+
+        /**
+         * @param id Identifier
+         * @param name Nickname for the friend
+         * @param status Status (Online/Offline)
+         */
         public Friend(String id, String name, String status) {
             this.id = id;
             this.name = name;

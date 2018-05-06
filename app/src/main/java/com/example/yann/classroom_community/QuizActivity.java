@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * User plays in this activity
+ */
 public class QuizActivity extends AppCompatActivity {
     TextView mScoreView;
     TextView mQuestionView;
@@ -40,14 +43,15 @@ public class QuizActivity extends AppCompatActivity {
          mButtonChoice3 = (Button) findViewById(R.id.choice3);
          mButtonChoice4 = (Button) findViewById(R.id.choice4);
 
+         // Get the first Question
         updateQuestion();
+
 
         mButtonChoice1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(mButtonChoice1.getText()== mAnswer)
                 {
-
                     mScore+=1;
                     updateScore(mScore);
                     updateQuestion();
@@ -60,6 +64,7 @@ public class QuizActivity extends AppCompatActivity {
                 }
             }
         });
+
         mButtonChoice2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -78,6 +83,7 @@ public class QuizActivity extends AppCompatActivity {
                 }
             }
         });
+
         mButtonChoice3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -96,6 +102,7 @@ public class QuizActivity extends AppCompatActivity {
                 }
             }
         });
+
         mButtonChoice4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -140,6 +147,6 @@ public class QuizActivity extends AppCompatActivity {
     }
     private void updateScore(int point)
     {
-        mScoreView.setText(""+mScore);
+        mScoreView.setText(mScore + "/4");
     }
 }

@@ -14,14 +14,20 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class LoginActivity extends AppCompatActivity {
-    public ArrayList<User> autorised = new ArrayList<User>();
+
+    // A list of authorised users
+    public ArrayList<User> authorised = new ArrayList<User>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        autorised.add(new User("Yann","aze"));
-        autorised.add(new User("Livio","iop"));
+
+        // Specify the authorised users here
+        authorised.add(new User("Yann","aze"));
+        authorised.add(new User("Livio","iop"));
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         Button loginB = (Button)findViewById(R.id.loginButton);
         final EditText loginForm = (EditText) findViewById(R.id.nameInput);
         final EditText passwordForm = (EditText) findViewById(R.id.passwordInput);
@@ -30,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 User testLogin = new User(loginForm.getText().toString(),passwordForm.getText().toString());
-                for (Iterator<User> i = autorised.iterator(); i.hasNext();) {
+                for (Iterator<User> i = authorised.iterator(); i.hasNext();) {
                     User user = i.next();
                     if( (loginForm.getText().toString().equals(user.login) ) && (passwordForm.getText().toString().equals(user.pw) )) {
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
@@ -49,6 +55,10 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * Data structure for a User (Login / Password)
+     */
     public static class User{
         String login;
         String pw;
