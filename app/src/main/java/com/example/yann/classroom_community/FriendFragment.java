@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,7 +69,12 @@ public class FriendFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyFriendRecyclerViewAdapter(FriendContent.FRIENDS, mListener));
+            List <FriendContent.Friend> friendList = FriendContent.FRIENDS;
+            friendList.add(new FriendContent.Friend("1","fdsoj","offline"));
+            friendList.add(new FriendContent.Friend("","ORAORAORA","offline"));
+
+            Log.i("test", friendList.toString());
+            recyclerView.setAdapter(new MyFriendRecyclerViewAdapter(friendList, mListener));
         }
         return view;
     }
