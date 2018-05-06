@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Name">Nom</string>
+    <string name="Password">Mot de passe</string>
+    <string name="Login">Se connecter</string>
+    <string name="navigation_drawer_open">Ouvrir le menu</string>
+    <string name="navigation_drawer_close">Fermer le menu</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="online">En ligne</string>
+    <string name="AboutDesc" translatable="false">Une application simple de quiz réalisée avec android dans le cadre de la licence pro MICDTL de l\'IUT Paris Descartes</string>
+</resources>

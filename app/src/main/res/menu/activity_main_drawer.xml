@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_presence"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Presence" />
+    <item
+        android:id="@+id/nav_Friends"
+        android:icon="@drawable/ic_menu_share"
+        android:title="Friends" />
+    <item
+        android:id="@+id/nav_Settings"
+        android:icon="@drawable/ic_menu_manage"
+        android:title="Param" />
+    <item
+        android:id="@+id/nav_About"
+        android:icon="@drawable/ic_menu_gallery"
+        android:title="About" />
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_menu_slideshow"
+        android:title="logout" />
+    </group>
+</menu>
